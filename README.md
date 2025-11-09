@@ -1,7 +1,8 @@
 ## SENTIMENT ANALYSIS
+
 ### Features
 <ul>
-  <li>Data-Preprocessing: NLP techniques</li>
+  <li>Data-Preprocessing: NLP techniques [16 Million+ Corpus]</li>
   <li>Data-Visualizations: WordCloud and KDE plot</li>
   <li>Model-Implementation: LSTM and FC layer</li>
   <li>Demonstration: Flask</li>
