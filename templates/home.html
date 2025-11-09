@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demonstration</title>
+    <style>
+      header {
+        text-align: center;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+      }
+      footer {
+        text-align: center;
+        background-color: #333;
+        color: white;
+        padding: 30px;
+      }
+      nav {
+        text-align: center;
+      }
+      nav a {
+        text-align: center;
+        text-decoration: none;
+        padding: 1px;
+        border: 2px solid #333;
+      }
+      button {
+        width: 466pt;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>MOVIE-REVIEWS SENTIMENT</header>
+
+    <nav>
+      <a href="/about">About</a>
+      <a href="/home">Home</a>
+    </nav>
+    <form action="/submit" method="post">
+      <p>Reviews:</p>
+      <textarea
+        name="review"
+        rows="10"
+        cols="50"
+        style="
+          width: 600px;
+          height: 250px;
+          font-size: 16px;
+          padding: 10px;
+          resize: both;
+        "
+        placeholder="Type your own review on a specific movie."
+      >
+      </textarea
+      ><br />
+      <button type="submit">Submit</button>
+    </form> 
+    <br>
+    {% if r and result%}
+       {% if r==1 %}
+          <p style="border: 1px solid green;width: 130pt; background-color: green; color: white;">{{result}}</p>
+       {% elif r==2%}
+          <p style="border: 1px solid orange; width: 130pt; background-color: orange; color: white;">{{result}}</p>
+       {% elif r==-1 %}
+          <p style="border: 1px solid red; width: 130pt; background-color: red; color: white;">{{result}}</p>
+       {%endif%}
+    {%endif%}
+
+
+    {% block content%} 
+    {% endblock %}
+
+    <footer>Thank You for being here.</footer>
+  </body>
+</html>
